@@ -1,16 +1,19 @@
 :root {
-    --blanco: #ffffff;
-    --obscuro: #212121;
-    --gris: #778899; 
-    --amarillo: #ffc107;
-    --azul: #00BFFF;
-    --rojo: #FF6347;
+    --primary: #ef443b;
+    --secondary: #FF8E91;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --warning: #ffc107;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --dark1: #464646;
 }
 
 html {
     font-size: 62.5%;
-    background-color: var(--obscuro);
-    color:var(--blanco);
+    background-color: var(--dark);
+    color: var(--white);
 }
 
 body {
@@ -25,17 +28,33 @@ body {
     font-weight: 700;
 }
 
-.titulo1 {
-    text-align: center;
-    font-size: 2rem;
-}
-
 .titulo span {
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
 }
 
-input, textarea{
-    background-color: var(--obscuro);
-    color: var(--blanco);
+.contenedor {
+    width: 120rem;
+    margin: 0 auto;
 }
+
+.nav-bg {
+    background-color: var(--dark);
+    text-align: center;
+}
+
+.navegacion-principal {
+    padding: 1rem;
+}
+
+.navegacion-principal a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+input, textarea{
+    background-color: var(--dark);
+    color: var(--white);
+} 
+
+

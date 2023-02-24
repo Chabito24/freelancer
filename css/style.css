@@ -34,22 +34,50 @@ body {
 }
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
 .nav-bg {
-    background-color: var(--dark);
-    text-align: center;
+    background-color: var(--warning);
 }
 
 .navegacion-principal {
-    padding: 1rem;
+    padding: 1rem; /*aumenta el espacio del padding en este caso 1 rem arriba y abajo*/
+    display: flex; /*activa flexboz se debe aplicar sobre el elemento padre en este caso sobre .navegacion-principal para poder dar forma a los enlaces de a*/
+    flex-direction: column;
+    justify-content: space-between; /*organiza el elemento el primer y ultimo elemento cada uno a las esquinas y los del centro les da un espacio igual a cada uno "ver en inspect sobre el navegador"*/
+    align-items: center;
+}
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+    }
 }
 
 .navegacion-principal a {
+    margin: 1rem;
     color: var(--white);
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navegacion-principal a:hover{
+    color: var(--primary);
+    background-color: var(--dark);
+}
+
+@media (min-width: 480px) {
+ .navegacion-principal a {
+    margin: 0rem;
+ }
 }
 
 input, textarea{

@@ -62,6 +62,15 @@ body {
     
 }
 
+/*sombra contenedor*/
+.sombra{
+    -webkit-box-shadow: 2px 1px 20px 4px rgba(239,68,59,0.45);
+    -moz-box-shadow: 2px 1px 20px 4px rgba(239,68,59,0.45);
+    box-shadow: 2px 1px 20px 4px rgba(239,68,59,0.45);
+    background-color: rgb(52 58 64 / 30%);
+    padding: 2rem;
+    border-radius: 2rem;
+}
 
 /*tipografia*/
 h1{
@@ -137,6 +146,7 @@ h1, h2, h3 {
     background-size: cover; /*toma todo el ancho disponible */
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero{

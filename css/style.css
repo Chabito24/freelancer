@@ -10,6 +10,8 @@
     --dark1: #464646;
 }
 
+/*globales*/
+
 html {
     font-size: 62.5%;
     background-color: var(--dark);
@@ -26,6 +28,40 @@ body {
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
 }
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boton{
+    background-color: rgb(239 68 59 / 50%); /*color de fondo*/
+    color: var(--light); /*color de la letra*/
+    padding: 1rem 3rem; /*grosor del pading del elemento boton*/
+    margin: 2rem; /*para separarlo un poco del textro*/
+    font-size: 2rem; /*tamaño de la latera*/
+    text-decoration: none; /*quita la linez que viene en los enlaces*/
+    text-transform: uppercase; /*transforma on uppercase el texto en mayuscula*/
+    font-weight: bold; /*texto en negrilla*/
+    border-radius: 1.5rem; /*borde redondeado a los botones*/
+    border-width: 0; /*quita el borde del boton*/
+    width: 90%; /*toma un ancho del 90% de la pantalla cuando la pantalla esta inferior al media quiery*/
+    text-align: center;
+}
+
+.boton:hover{
+    background-color: rgb(0 0 0 / 30%);
+}
+
+@media (min-width: 480px) {
+    .boton {
+        width: auto; /*reinicia el tamaño original del boton*/
+    }
+    
+}
+
+
+/*tipografia*/
 h1{
     font-size: 6rem;
 }
@@ -43,18 +79,17 @@ h1, h2, h3 {
 }
 
 
+/* TITULOS */
+
 .titulo span {
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
 }
 
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
+/* NAVEGACION PRINCIPAL */
 
 .nav-bg {
-    background-color:var(--dark)
+    background-color:var(--dark);
 }
 
 .navegacion-principal {
@@ -85,7 +120,7 @@ h1, h2, h3 {
 }
 
 .navegacion-principal a:hover{
-    color: var(--primary);
+    color: rgb(239 68 59 / 70%);;
 }
 
 @media (min-width: 480px) {
@@ -114,6 +149,8 @@ h1, h2, h3 {
     align-items: center; /* alineacion horizontal aplica con fdisply flex y flex direction column*/
     justify-content: center; /*alineacion vertical con la misma condiicion de display flex mas direction column*/
 }
+
+
 
 input, textarea{
     background-color: var(--dark);

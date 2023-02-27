@@ -14,19 +14,34 @@ html {
     font-size: 62.5%;
     background-color: var(--dark);
     color: var(--white);
+    box-sizing: border-box;/*box model permite que la inclusion de propiedades como padding, margin o border no aumentenel tamaño total del elemento inicial*/
+
 }
+
+*, *:before, *:after {
+    box-sizing: inherit; /* el asterisco selecciona todos los elementos del HTML y aplica el box model de la etiqueta de HTML*/
+  }
 
 body {
     font-size: 16px;
     font-family: 'Quicksand', sans-serif;
 }
-
-.titulo {
-    text-align: center;
+h1{
     font-size: 6rem;
-    font-family: 'Stalemate', cursive;
-    font-weight: 700;
 }
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
 
 .titulo span {
     font-size: 1rem;
@@ -39,7 +54,7 @@ body {
 }
 
 .nav-bg {
-    background-color: var(--warning);
+    background-color:var(--dark)
 }
 
 .navegacion-principal {
@@ -71,13 +86,33 @@ body {
 
 .navegacion-principal a:hover{
     color: var(--primary);
-    background-color: var(--dark);
 }
 
 @media (min-width: 480px) {
  .navegacion-principal a {
     margin: 0rem;
  }
+}
+
+.hero{
+    background-image: url(../img/hero.jpg); /*con esta propiedad incluimos  una imagen en el documento dos puntos para salir de la carpeta donde estamos diagonal y el nombre de la carpeta a la que vamos a entrar y nuevamente diagional y el nombre del archivo que vamos a incluir*/
+    background-repeat: no-repeat; /*para que no se repita la imagen*/
+    background-size: cover; /*toma todo el ancho disponible */
+    height: 450px;
+    position: relative;
+}
+
+.contenido-hero{
+    position: absolute;
+    /*background-color: rgba(0,0,0, .6) ; asi se usaba la transparencia antes con el alpha channel*/
+    background-color: rgb(0 0 0 / 60%); /*este algunos navegadores no lo interpretan entonces sep uede usar el anterior*/ 
+    width: 100%;
+    height: 100%;
+    /*alineacion horizontal y vertical con flex direction column*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* alineacion horizontal aplica con fdisply flex y flex direction column*/
+    justify-content: center; /*alineacion vertical con la misma condiicion de display flex mas direction column*/
 }
 
 input, textarea{

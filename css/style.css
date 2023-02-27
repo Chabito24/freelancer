@@ -162,7 +162,18 @@ h1, h2, h3 {
     justify-content: center; /*alineacion vertical con la misma condiicion de display flex mas direction column*/
 }
 
+/*servicios*/
 
+@media (min-width: 768px) {
+    .servicios {
+        display: grid; /*propiedades de CSS grid ver video 45 en Udemy proyecto 1*/
+        /*grid-template-columns: 33.3% 33.3% 33.3%; /*define las columnas en este caso estoy definiendo 3 columnbas que ovupan el 33% del ancho del contenedor disponible*/ 
+        /*grid-template-rows: 200px 600px; /*este crea las filas en este caso dos filas una de 200px y otra de 800px*/
+        /*grid: 200px 800px / 33.3% 33.3% 33.3%; /*este reemplaza los dos anteriores se escribe asi grid: filas / columnas; para el ejercicio hay 2 filas 3 columnas*/
+        grid: 1fr / repeat(3, 1fr);/*se puede reemplazar por 1fr que significa una fraccion del espacio total del contenedor*/
+
+    }
+}
 
 input, textarea{
     background-color: var(--gray-dark);

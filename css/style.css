@@ -33,13 +33,14 @@ body {
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
+    width: 90%;
 }
 
 .boton{
     background-color: rgb(239 68 59 / 50%); /*color de fondo*/
     color: var(--light); /*color de la letra*/
     padding: 1rem 3rem; /*grosor del pading del elemento boton*/
-    margin: 2rem; /*para separarlo un poco del textro*/
+    margin-top: 2rem; /*para separarlo un poco del textro*/
     font-size: 2rem; /*tamaño de la latera*/
     text-decoration: none; /*quita la linez que viene en los enlaces*/
     text-transform: uppercase; /*transforma on uppercase el texto en mayuscula*/
@@ -104,7 +105,8 @@ h1, h2, h3 {
 }
 
 .navegacion-principal {
-    padding: 1rem; /*aumenta el espacio del padding en este caso 1 rem arriba y abajo*/
+    padding: ,0 1rem; /*aumenta el espacio del padding en este caso 1 rem arriba y abajo*/
+    height: 4rem;
     display: flex; /*activa flexboz se debe aplicar sobre el elemento padre en este caso sobre .navegacion-principal para poder dar forma a los enlaces de a*/
     flex-direction: column;
     justify-content: space-between; /*organiza el elemento el primer y ultimo elemento cada uno a las esquinas y los del centro les da un espacio igual a cada uno "ver en inspect sobre el navegador"*/
@@ -123,7 +125,9 @@ h1, h2, h3 {
 }
 
 .navegacion-principal a {
-    margin: 1rem;
+    display: block;
+    text-align: center;
+    padding: 1rem;
     color: var(--white);
     text-decoration: none;
     font-size: 2rem;
@@ -131,7 +135,7 @@ h1, h2, h3 {
 }
 
 .navegacion-principal a:hover{
-    color: rgb(239 68 59 / 70%);
+    background-color: rgb(239 68 59 / 70%);
 }
 
 @media (min-width: 480px) {
@@ -146,7 +150,7 @@ h1, h2, h3 {
     background-size: cover; /*toma todo el ancho disponible */
     height: 450px;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .contenido-hero{
@@ -208,13 +212,18 @@ h1, h2, h3 {
 input, textarea{
     background-color: var(--gray-dark);
     color: var(--white);
+    width: 100%;
+    border: none;
+    padding: 2rem;
+    border-radius: 2rem;
+
 } 
 
 .formulario {
     background-color: var(--dark1);
     width: min( 60rem, 100%);/*utiliza el valor mas pequeño*/
     margin: 0 auto; /*centra el formulario opr lo general se usa en estos formularios*/
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 2rem;
 }
 
@@ -230,6 +239,25 @@ input, textarea{
     font-weight: 400;
     margin-bottom: 2rem;
     color: var(--secondary);
+}
+
+.contenedor-campos{
+
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label {
+ color: var(--light);
+ font-weight: bold;
+ margin-bottom: 0.5rem;
+ display: block;
+}
+
+.w-100{
+    width: 100%;
 }
 
 

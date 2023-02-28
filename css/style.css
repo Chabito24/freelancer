@@ -203,9 +203,33 @@ h1, h2, h3 {
     justify-content: center;
 }
 
+/*contacto*/
+
 input, textarea{
     background-color: var(--gray-dark);
     color: var(--white);
 } 
+
+.formulario {
+    background-color: var(--dark1);
+    width: min( 60rem, 100%);/*utiliza el valor mas pequeño*/
+    margin: 0 auto; /*centra el formulario opr lo general se usa en estos formularios*/
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.formulario fieldset {
+    border: none;
+
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+}
 
 

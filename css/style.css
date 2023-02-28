@@ -8,6 +8,10 @@
     --light: #f8f9fa;
     --dark: #000000;
     --dark1: #464646;
+    --WhatsApp: #00a884;
+    --facebook: #1877f2;
+    --instagram: #B84CCC;
+
 }
 
 /*globales*/
@@ -39,7 +43,7 @@ body {
 .boton{
     background-color: rgb(239 68 59 / 50%); /*color de fondo*/
     color: var(--light); /*color de la letra*/
-    padding: 1rem 3rem; /*grosor del pading del elemento boton*/
+    padding: 1rem; /*grosor del pading del elemento boton*/
     margin-top: 2rem; /*para separarlo un poco del textro*/
     font-size: 2rem; /*tamaño de la latera*/
     text-decoration: none; /*quita la linez que viene en los enlaces*/
@@ -144,7 +148,7 @@ h1, h2, h3 {
 }
 
 .hero{
-    background-image: url(../img/hero.jpg); /*con esta propiedad incluimos  una imagen en el documento dos puntos para salir de la carpeta donde estamos diagonal y el nombre de la carpeta a la que vamos a entrar y nuevamente diagional y el nombre del archivo que vamos a incluir*/
+    background-image: url(../img/hero.avif); /*con esta propiedad incluimos  una imagen en el documento dos puntos para salir de la carpeta donde estamos diagonal y el nombre de la carpeta a la que vamos a entrar y nuevamente diagional y el nombre del archivo que vamos a incluir*/
     background-repeat: no-repeat; /*para que no se repita la imagen*/
     background-size: cover; /*toma todo el ancho disponible */
     height: 450px;
@@ -186,7 +190,20 @@ h1, h2, h3 {
     }
 } 
 
-.servicio{ /*centra los circulos de coloor rojo transparente*/
+@media (min-width: 768px) {
+    .network {
+        display: grid; /*propiedades de CSS grid ver video 45 en Udemy proyecto 1*/
+        /*grid-template-columns: 33.3% 33.3% 33.3%; /*define las columnas en este caso estoy definiendo 3 columnbas que ovupan el 33% del ancho del contenedor disponible*/ 
+        /*grid-template-rows: 200px 600px; /*este crea las filas en este caso dos filas una de 200px y otra de 800px*/
+        /*grid: 200px 800px / 33.3% 33.3% 33.3%; /*este reemplaza los dos anteriores se escribe asi grid: filas / columnas; para el ejercicio hay 2 filas 3 columnas*/
+        grid: 2fr / repeat(3, 1fr);/*se puede reemplazar por 1fr que significa una fraccion del espacio total del contenedor*/
+        column-gap: 1rem;}
+
+    
+
+
+
+.servicio { /*centra los circulos de coloor rojo transparente*/
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -211,6 +228,35 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.servicio .icono:hover {
+    background-color: rgb(70 70 70 / 20%);
+}
+
+.servicio .WhatsApp:hover {
+    background-color: rgb(0 168 132 / 20%);
+}
+
+.servicio .facebook:hover {
+    background-color: rgb(24 119 242 / 20%);
+}
+
+.servicio .instagram:hover {
+    background-color: rgb(184 76 204 / 20%);
+}
+
+.servicio .github:hover {
+    background-color: rgb(108 117 125 / 20%);
+}
+
+.servicio .youtube:hover {
+    background-color: rgb(255 142 145 / 20%);
+}
+
+.p {
+    color: var(--secondary);
+    font-weight: 700;
 }
 
 /*contacto*/
@@ -250,7 +296,7 @@ input, textarea{
 @media (min-width: 780px) {
     .contenedor-campos{
         display: grid;
-        grid: auto auto 20rem / repeat(2, 1fr);
+        grid: auto auto 15rem o/ repeat(2, 1fr);
         column-gap: 1rem;
        }
 }

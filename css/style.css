@@ -17,7 +17,7 @@ html {
     background-color: var(--dark);
     color: var(--white);
     box-sizing: border-box;/*box model permite que la inclusion de propiedades como padding, margin o border no aumentenel tamaño total del elemento inicial*/
-
+    scroll-snap-type: y mandatory; /*permite un scroll  a cada parte del documento donde se defina en mi caso a servicios y a formulario de contacto*/
 }
 
 *, *:before, *:after {
@@ -106,7 +106,6 @@ h1, h2, h3 {
 
 .navegacion-principal {
     padding: ,0 1rem; /*aumenta el espacio del padding en este caso 1 rem arriba y abajo*/
-    height: 4rem;
     display: flex; /*activa flexboz se debe aplicar sobre el elemento padre en este caso sobre .navegacion-principal para poder dar forma a los enlaces de a*/
     flex-direction: column;
     justify-content: space-between; /*organiza el elemento el primer y ultimo elemento cada uno a las esquinas y los del centro les da un espacio igual a cada uno "ver en inspect sobre el navegador"*/
@@ -166,6 +165,13 @@ h1, h2, h3 {
     justify-content: center; /*alineacion vertical con la misma condiicion de display flex mas direction column*/
 }
 
+.servicios, 
+.navegacion-principal, 
+.formulario {
+    scroll-snap-align: center; 
+    scroll-snap-stop: always; /*estas dos lineas de codigo hace que al dar el sroll definido en HTML se detenga en esa parte del documento, aplica en navegación principal, servicios y formulario*/
+}
+
 /*servicios*/
 
 @media (min-width: 768px) {
@@ -178,7 +184,7 @@ h1, h2, h3 {
         column-gap: 1rem;
 
     }
-}
+} 
 
 .servicio{ /*centra los circulos de coloor rojo transparente*/
     display: inline-flex;

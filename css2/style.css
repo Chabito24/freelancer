@@ -28,6 +28,16 @@
         box-sizing: inherit; /* el asterisco selecciona todos los elementos del HTML y aplica el box model de la etiqueta de HTML*/
     }
 
+    
+    .navegacion-principal,
+    .servicios,
+    .formulario,
+    .grid1,
+    .foot {
+        scroll-snap-align: center; 
+        scroll-snap-stop: always; /*estas dos lineas de codigo hace que al dar el sroll definido en HTML se detenga en esa parte del documento, aplica en navegación principal, servicios y formulario*/
+    }
+
     body {
         font-size: 20px;
         font-family: 'Quicksand', sans-serif;
@@ -160,7 +170,7 @@
         background-repeat: no-repeat; /*para que no se repita la imagen*/
         background-size: cover; /*toma todo el ancho disponible */
         height: 450px;
-        position: relative;
+        position: relative; /*este es el padre de contenido hero y debo asignarlo para poder posicionar posteriormente el contenido del hero en posicion absoluta*/
         margin-bottom: 4rem;
     }
 
@@ -171,9 +181,9 @@
         width: 100%;
         height: 100%;
         /*alineacion horizontal y vertical con flex direction column*/
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* alineacion horizontal aplica con fdisply flex y flex direction column*/
+        display: flex; /*posiciona todo el contenido hero de izquierda a derecha*/
+        flex-direction: column;/*habilitamos column para que me pocisione ahora todo el contenido uno sobre otro*/
+        align-items: center; /* alineacion horizontal aplica con display flex y flex direction column*/
         justify-content: center; /*alineacion vertical con la misma condiicion de display flex mas direction column*/
     }
 
@@ -199,16 +209,6 @@
         margin-bottom: 4rem; 
     }
 
-    .navegacion-principal,
-    .servicios,
-    .ser1,
-    .ser2,
-    .ser3, 
-    .formulario,
-    .foot {
-        scroll-snap-align: center; 
-        scroll-snap-stop: always; /*estas dos lineas de codigo hace que al dar el sroll definido en HTML se detenga en esa parte del documento, aplica en navegación principal, servicios y formulario*/
-    }
 
     span {
         font-weight: bold;
@@ -223,7 +223,7 @@
             /*grid-template-rows: 200px 600px; /*este crea las filas en este caso dos filas una de 200px y otra de 800px*/
             /*grid: 200px 800px / 33.3% 33.3% 33.3%; /*este reemplaza los dos anteriores se escribe asi grid: filas / columnas; para el ejercicio hay 2 filas 3 columnas*/
             grid: 1fr / repeat(3, 1fr);/*se puede reemplazar por 1fr que significa una fraccion del espacio total del contenedor*/
-            column-gap: 2rem 0;
+            column-gap: 5rem;
 
         }
     } 
@@ -342,11 +342,11 @@
 
 
     .campo textarea{
-        height: 20rem;
+        height: 12rem;
     }
 
     .espacio {
-        margin: 5rem 0
+        margin: 5rem 0;
     }
 
     /*footer*/

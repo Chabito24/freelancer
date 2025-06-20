@@ -165,6 +165,15 @@
     }
     }
 
+    .nav-bg {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(52 58 64 / 90%);
+  backdrop-filter: blur(4px);
+}
+
+
     .hero{
         background-image: url(../img/hero.avif); /*con esta propiedad incluimos  una imagen en el documento dos puntos para salir de la carpeta donde estamos diagonal y el nombre de la carpeta a la que vamos a entrar y nuevamente diagional y el nombre del archivo que vamos a incluir*/
         background-repeat: no-repeat; /*para que no se repita la imagen*/
@@ -229,9 +238,13 @@
     } 
 
     .servicio { /*centra los circulos de coloor rojo transparente*/
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
     }
 
     .servicio .dark {
@@ -241,6 +254,8 @@
     .servicio h3{
         color: var(--secondary);
         font-weight: 400;
+        width: 100%;
+        text-align: center;
     }
 
     .servicio p{

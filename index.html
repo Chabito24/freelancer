@@ -109,7 +109,10 @@
             <section>
                 <h2>Contact</h2>
         
-                    <form class="formulario" action="">
+                    <form action="https://formsubmit.co/emartinezj1802@gmail.com" method="POST" class="formulario">
+                        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+                        <input type="hidden" name="_captcha" value="false">
+
                             <fieldset>
                                 <legend>let's talk! leave me your data</legend>
 
@@ -117,22 +120,22 @@
         
                                     <div class="campo">
                                         <label for="">Name</label>
-                                        <input type="text" placeholder="Your name">
+                                        <input type="text" name="name" placeholder="Your name" required>
                                     </div>
                                     
                                     <div class="campo">
                                         <label for="">phone</label>
-                                        <input type="tel" placeholder="Phone number">
+                                        <input type="tel" name="phone" placeholder="Phone number" required>
                                     </div>
                                     
                                     <div class="campo">
                                         <label for="">Mail</label>
-                                        <input type="email" placeholder="e-mail">
+                                        <input type="email" name="email" placeholder="Your email" required>
                                     </div>
                                     
                                     <div class="campo">
                                         <label for="">Message</label>
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <textarea name="message" id="" cols="30" rows="10" required></textarea>
                                     </div>
 
                                 </div>

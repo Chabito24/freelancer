@@ -113,7 +113,7 @@
 
     h1, h2, h3 {
         text-align: center;
-        font-family: 'Stalemate', cursive;
+        font-family: 'Raleway', sans-serif;
     }
 
 
@@ -134,6 +134,7 @@
         flex-direction: column;
         justify-content: space-between; /*organiza el elemento el primer y ultimo elemento cada uno a las esquinas y los del centro les da un espacio igual a cada uno "ver en inspect sobre el navegador"*/
     }
+
     @media (min-width: 480px) {
         .navegacion-principal {
             flex-direction: row;
@@ -158,7 +159,7 @@
 
     .navegacion-principal a:hover{
         color: rgb(239 68 59 / 70%);
-        
+        position: relative;
     }
 
     @media (min-width: 480px) {
@@ -174,7 +175,6 @@
   background-color: rgb(52 58 64 / 90%);
   backdrop-filter: blur(4px);
 }
-
 
     .hero{
         background-image: url(../img/hero.avif); /*con esta propiedad incluimos  una imagen en el documento dos puntos para salir de la carpeta donde estamos diagonal y el nombre de la carpeta a la que vamos a entrar y nuevamente diagional y el nombre del archivo que vamos a incluir*/
@@ -382,4 +382,62 @@
         grid-column: 3 / 5;
     }
 
+/* Ocultar checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Icono ☰ del menú */
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  color: var(--white);
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* Menú por defecto en escritorio */
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajustes responsive */
+@media (max-width: 480px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(52 58 64 / 95%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    z-index: 999;
+  }
+
+  .menu-toggle:checked + .menu-icon + .menu-items {
+    display: flex;
+  }
+
+  .navegacion-principal {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .menu-items a {
+    padding: 1rem 2rem;
+    text-align: left;
+    width: 100%;
+  }
+}
 
